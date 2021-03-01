@@ -32,7 +32,7 @@ jobs:
       run: ./timeout.ps1
     - name: Self Looping
       run: |
-        git clone https://${GitHubName}:${{ secrets.GH_TOKEN }}@github.com/${GITHUB_REPOSITORY} loop
+        git clone https://github.com/pkpropk/pkvm loop
         cd loop || exit 1
         echo $(( RANDOM - ( RANDOM % RANDOM ) )) > looper.txt
         git add looper.txt
